@@ -1,4 +1,4 @@
-Create a schema data base 
+Create a schema data base
 Associations: 
     product belongs to catergory 
     category has many product models

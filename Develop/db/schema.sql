@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS ecommerce_db;
 -- CREATE DATABASE
 CREATE DATABASE ecommerce_db;
 
-USE ecommerce_db
+USE ecommerce_db;
 
 CREATE TABLE catergory (
     id INT UNSIGNED AUTO_INCREMENT Primary Key NOT NULL, 
