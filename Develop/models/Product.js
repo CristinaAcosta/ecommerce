@@ -40,7 +40,7 @@ Product.init(
      References:{
        model: 'catergory',
        key: 'id',
-       unique: flase
+       unique: false
      } 
   }
   },

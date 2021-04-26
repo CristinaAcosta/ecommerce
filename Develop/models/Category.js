@@ -16,19 +16,8 @@ Category.init(
   catergory_name: {
       type: DataTypes.STRING,
       allowNull: false,
-  },
-  catergory_id: {
-    type: DataTypes.INTEGER
-      /* References the Category model's id??*/
   }
-},
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'category',
-  }
+}
 );
 
 module.exports = Category;
