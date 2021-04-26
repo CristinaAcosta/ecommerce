@@ -1,0 +1,13 @@
+Create a schema data base 
+Associations: 
+    product belongs to catergory 
+    category has many product models
+    product belongs to tag
+    tag belongs to many product models
+Unnfinished API routes to create, read, update, and delete
+    product-routes.js
+    tag-routes.js
+    catergory routes.js
+Running NPM seed
+Sync models w MySQL 
+    server.js
