@@ -23,12 +23,12 @@ Category.belongsToMany(Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
-Products.belongsToMany(Tag, {
+Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
     unique: false
   }, 
-  as: "Product_tags"
+  as: "Product_tag"
 });
 
 // Tags belongToMany Products (through ProductTag)
