@@ -3,12 +3,12 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   // find all categories
   try{
   const categoryData = await Category.findAll({
     // be sure to include its associated Products
-    include: [{model: Product, as: "categorized_products"}]
+    include: [{model: Product, through: Category, as: "categorized_products"}]
   });
  
   res.status(200).json(categoryData);
@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
        // be sure to include its associated Products
-      include: [{model: Product, as: "categorized_products"}]
+      include: [{model: Product, through: Category, as: "categorized_products"}]
     });
 
     if(!categoryData){
@@ -62,7 +62,7 @@ router.put('/:id', async (req, res) => {
       );
 
       if(!categoryData){
-        res.status(404).json({message: 'Category not updated with id ${req.params.id}'});
+        res.status(404).json({message: `Category not updated with id ${req.params.id}`});
         return;
       }
 
@@ -82,7 +82,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if(!catResults){
-      res.status(404).json({message: 'Category not deleted with id ${req.params.id}'});
+      res.status(404).json({message: `Category not deleted with id ${req.params.id}`});
       return;
     }
 

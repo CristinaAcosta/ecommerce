@@ -3,7 +3,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   // find all tags
   try{
   const tagData = await ProductTag.findAll({
@@ -83,7 +83,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if(!tagResults){
-      res.status(404).json({message: 'Product tag not deleted with id ${req.params.id}'});
+      res.status(404).json({message: `Product tag not deleted with id ${req.params.id}`});
       return;
     }
     
