@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
       include: [Category, {model: Tag, through: ProductTag}]
     });
 
-    if(!tagData){
+    if(!productData){
       res.status(404).json({message: `Product not found with id ${req.params.id}`});
       return;
     }
@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
-            product_id: product.id,
+            product_id,
             tag_id,
           };
         });

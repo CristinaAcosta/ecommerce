@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "## Links:  Repo: https://github.com/CristinaAcosta/ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristinaAcosta/ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristinaAcosta/ecommerce/issues"
+  },
+  "homepage": "https://github.com/CristinaAcosta/ecommerce#readme",
+  "devDependencies": {
+    "db-seed": "^1.2.0"
+  }
+}
